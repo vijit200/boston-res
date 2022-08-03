@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Price Prediction</title>
+</head>
+<body>
+    <div style="color: rgb(25, 25, 172);">
+        <section>
+            <h1>Boston Price Prediction</h1>
+            <form action="{{ url_for('predict')}}" method="POST">
+                <input type="text" name="CRIM" placeholder="CRIM" id="cr">
+                <br> <input type="text" name="ZN" placeholder="ZN" id="zn">
+                <br><input type="text" name="INDUS" id="idu" placeholder="INDUS">
+                <br><input type="text" name="CHAS" id="cha" placeholder="CHAS">
+                <br><input type="text" name="NOX" id="no" placeholder="NOX">
+                <br><input type="text" name="RM" id="rm" placeholder="RM">
+                <br><input type="text" name="AGE" id="ag" placeholder="AGE">
+                <br><input type="text" name="DIS" id="dis" placeholder="DIS">
+                <br><input type="text" name="RAD" id="rad" placeholder="RAD">
+                <br><input type="text" name="TAX" id="tax" placeholder="TAX">
+                <br><input type="text" name="PTRATIO" id="pt" placeholder="PTRATIO">
+                <br><input type="text" name="B" id="b" placeholder="B">
+                <br><input type="text" name="LSTAT" id="ls" placeholder="LSTAT">
+                <br>
+                <button type="submit" id="sub">
+                    <b>Predict price of house</b>
+                </button>
+
+            </form>
+
+            <br><br>
+            <b>
+                <u>
+                    <i>
+                        <big>Price</big>
+                    </i>
+                </u>
+            </b>
+            <b>:</b>
+            <b>{{predict_price}}</b>
+        </section>
+    </div>
+</body>
+</html>
